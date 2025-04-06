@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">To-Do List</h1>
+
+        <!-- Set password section -->
+        <div id="set-password-section">
+            <input type="password" id="password" placeholder="Set a password" />
+            <button onclick="setPassword()">Set Password</button>
+        </div>
+
+        <!-- Task addition section -->
+        <div id="add-task-section">
+            <h2>Add Task</h2>
+            <input type="text" id="task-name" placeholder="Task Name" />
+            <input type="date" id="task-deadline" />
+            <input type="text" id="task-category" placeholder="Category" />
+            <button onclick="addTask()">Add Task</button>
+        </div>
+
+        <!-- View Tasks Button -->
+        <button onclick="showPasswordModal()">View Tasks</button>
+
+        <!-- Task display table -->
+        <table id="task-table">
+            <thead>
+                <tr>
+                    <th>Priority</th>
+                    <th>Category</th>
+                    <th>Task</th>
+                    <th>Deadline</th>
+                    <th>Completed</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="task-list"></tbody>
+        </table>
+
+        <!-- Password Modal -->
+        <div id="password-modal" class="password-modal">
+            <h2>Enter Password to View Tasks</h2>
+            <input type="password" id="entered-password" placeholder="Enter Password" />
+            <button onclick="verifyPassword()">Submit</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
